@@ -13,10 +13,10 @@ export default (state = initialState, action) => {
 				...state,
 				books: action.payload,
 			};
-		case ADD_BOOK:
+        case ADD_BOOK:
 			return {
 				...state,
-				books: [...state.books, action.payload.book],
+				books: [...state.books, action.payload],
 			};
 		default:
 			return state;
