@@ -20,8 +20,7 @@ export default (state = initialState, action) => {
 			};
 		default:
 			return state;
-	}
-};
+	}};
 
 export const setBooksAC = books => ({ type: SET_BOOKS, payload: books });
-export const addBookAC = book => ({ type: ADD_BOOK, payload: { book } });
+export const addBookAC = book => ({ type: ADD_BOOK, payload: book });
