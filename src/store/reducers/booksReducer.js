@@ -1,7 +1,12 @@
 const SET_BOOKS = 'SET_BOOKS';
 const ADD_BOOK = 'ADD_BOOK';
+// booksLvl
+const initialState = {
+    books:[],
+    aaaaa: 'что0то еще'
+}
 
-export default (state = {}, action) => {
+export default (state = initialState, action) => {
 	switch (action.type) {
 		default:
 			return state;
