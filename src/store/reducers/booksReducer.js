@@ -11,7 +11,7 @@ export default (state = initialState, action) => {
 		case SET_BOOKS:
 			return {
 				...state,
-				books: action.payload.books,
+				books: action.payload,
 			};
 		case ADD_BOOK:
 			return {
@@ -23,5 +23,5 @@ export default (state = initialState, action) => {
 	}
 };
 
-export const setBooksAC = books => ({ type: SET_BOOKS, payload: { books } });
+export const setBooksAC = books => ({ type: SET_BOOKS, payload: books });
 export const addBookAC = book => ({ type: ADD_BOOK, payload: { book } });

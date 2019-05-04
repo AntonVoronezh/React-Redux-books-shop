@@ -6,6 +6,8 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 import store from './store/store';
 
+store().dispatch({ type: 'SET_BOOKS', payload: [{id:1, title: 'Книга 1'}] });
+
 
 ReactDOM.render(
     <Provider store={store()}>
