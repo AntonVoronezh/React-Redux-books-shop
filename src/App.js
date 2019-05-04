@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import {connect} from 'react-redux'
+import {addBookAC} from './store/reducers/booksReducer'
 import './App.css';
 
 class App extends Component {
@@ -12,4 +13,19 @@ class App extends Component {
   }
 }
 
-export default connect()(App);
+const mapStateToProps = state => {
+  return {
+    state
+  }
+
+}
+
+const mapDispatchToProps = dispatch => {
+  return {
+    addBookCB: book => dispatch(addBookAC(book))
+  }
+}
+
+
+
+export default connect(mapStateToProps, mapDispatchToProps)(App);
