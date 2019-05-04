@@ -8,6 +8,5 @@ export default (state = {}, action) => {
 	}
 };
 
-export const setBooksAC = books => ({type: SET_BOOKS, payload:{books}})
-
- 
+export const setBooksAC = books => ({ type: SET_BOOKS, payload: { books } });
+export const addBookAC = book => ({ type: ADD_BOOK, payload: { book } });
