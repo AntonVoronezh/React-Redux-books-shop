@@ -1,6 +1,6 @@
 import React from 'react';
 import Book from './Book/Book';
-import { Card } from 'semantic-ui-react';
+import { Card, Loader } from 'semantic-ui-react';
 
 export default ({ books: array, isLoading }) => {
 	let books;
@@ -13,7 +13,7 @@ export default ({ books: array, isLoading }) => {
 
 	return (
 		<Card.Group itemsPerRow={4}>
-			{isLoading ? 'загрузка...' : books}
+			{isLoading ?  <Loader active inline='centered' /> : books}
 		</Card.Group>
 	);
 };
