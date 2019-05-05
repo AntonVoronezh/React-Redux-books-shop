@@ -1,9 +1,10 @@
 import React from 'react';
 
 export default props => {
+    debugger
     return (
         <div>
-            Books
+            Book
         </div>
         
     )
