@@ -1,19 +1,19 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { addBookAC } from './store/reducers/booksReducer';
+import axios from 'axios';
 import './App.css';
 
 // let bookF = { id: 2, title: 'Книга 22' };
 
 class App extends Component {
-
 	componentDidMount() {
-		
+		axios.get('/data.json').then(({ data }) => console.log('resolve', data));
 	}
 
-  buttonAddBookHandler = book => {
-    // this.props.addBookCB(bookF);
-  }
+	buttonAddBookHandler = book => {
+		// this.props.addBookCB(bookF);
+	};
 
 	render() {
 		const { books } = this.props;
