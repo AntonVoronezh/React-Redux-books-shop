@@ -4,6 +4,8 @@ import { setBooksAC } from './store/reducers/booksReducer';
 import axios from 'axios';
 import './App.css';
 import Books from './components/Books/Books.jsx';
+import { Container } from 'semantic-ui-react';
+import 'semantic-ui-css/semantic.min.css';
 
 class App extends Component {
 	componentDidMount() {
@@ -11,12 +13,10 @@ class App extends Component {
 	}
 
 	render() {
-		// const { books, isLoading } = this.props;
-		// return <div className="App">{isLoading ? 'загрузка...' : '+++' + books}</div>;
 		return (
-			<div>
-				<Books {...this.props}/>
-			</div>
+			<Container>
+				<Books {...this.props} />
+			</Container>
 		);
 	}
 }
