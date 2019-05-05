@@ -15,7 +15,7 @@ class App extends Component {
 		// return <div className="App">{isLoading ? 'загрузка...' : '+++' + books}</div>;
 		return (
 			<div>
-				<Books />
+				<Books {...this.props}/>
 			</div>
 		);
 	}

@@ -1,10 +1,10 @@
 import React from 'react';
 import Book from './Book/Book';
 
-export default props => {
+export default ({ books, isLoading }) => {
     return (
         <div>
-            Books
+            <div className="App">{isLoading ? 'загрузка...' : '+++' + books}</div>;
         </div>
         
     )
