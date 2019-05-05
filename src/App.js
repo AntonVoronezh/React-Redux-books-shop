@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { addBookAC } from './store/reducers/booksReducer';
+import { setBooksAC } from './store/reducers/booksReducer';
 import axios from 'axios';
 import './App.css';
 
@@ -8,21 +8,21 @@ import './App.css';
 
 class App extends Component {
 	componentDidMount() {
-		axios.get('/data.json').then(({ data }) => console.log('resolve', data));
+		axios.get('/data.json').then(({ data }) => this.props.setBooksCB(data));
 	}
 
-	buttonAddBookHandler = book => {
-		// this.props.addBookCB(bookF);
-	};
+	// buttonAddBookHandler = book => {
+	// 	// this.props.addBookCB(bookF);
+	// };
 
 	render() {
-		const { books } = this.props;
-
+			const { books } = this.props;
 		return (
 			<div className="App">
-				{books[0].title}
+
+				{books.length === 0 ? 'загрузка...' : '+++' + books.length}
 				<br />
-				<button onClick={this.buttonAddBookHandler}> add book</button>
+				{/* <button onClick={this.buttonAddBookHandler}> add book</button> */}
 			</div>
 		);
 	}
@@ -36,7 +36,7 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
 	return {
-		addBookCB: book => dispatch(addBookAC(book)),
+		setBooksCB: books => dispatch(setBooksAC(books)),
 	};
 };
 

@@ -13,14 +13,14 @@ export default (state = initialState, action) => {
 				...state,
 				books: action.payload,
 			};
-        case ADD_BOOK:
-			return {
-				...state,
-				books: [...state.books, action.payload],
-			};
+        // case ADD_BOOK:
+		// 	return {
+		// 		...state,
+		// 		books: [...state.books, action.payload],
+		// 	};
 		default:
 			return state;
 	}};
 
 export const setBooksAC = books => ({ type: SET_BOOKS, payload: books });
-export const addBookAC = book => ({ type: ADD_BOOK, payload: book });
+// export const addBookAC = book => ({ type: ADD_BOOK, payload: book });

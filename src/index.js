@@ -8,7 +8,7 @@ import createStore from './store/store';
 
 const store = createStore();
 
-store.dispatch({ type: 'SET_BOOKS', payload: [{ id: 1, title: 'Книга 1' }] });
+// store.dispatch({ type: 'SET_BOOKS', payload: [{ id: 1, title: 'Книга 1' }] });
 
 // setTimeout(() => {
 // 	store.dispatch({ type: 'ADD_BOOK', payload:  { id: 2, title: 'Книга 22' } });
