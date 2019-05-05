@@ -3,16 +3,20 @@ import { connect } from 'react-redux';
 import { addBookAC } from './store/reducers/booksReducer';
 import './App.css';
 
-let bookF = { id: 2, title: 'Книга 22' };
+// let bookF = { id: 2, title: 'Книга 22' };
 
 class App extends Component {
 
+	componentDidMount() {
+		
+	}
+
   buttonAddBookHandler = book => {
-    this.props.addBookCB(bookF);
+    // this.props.addBookCB(bookF);
   }
 
 	render() {
-		const { books } = this.props.booksLvl;
+		const { books } = this.props;
 
 		return (
 			<div className="App">
@@ -26,7 +30,7 @@ class App extends Component {
 
 const mapStateToProps = state => {
 	return {
-		booksLvl: state.booksLvl,
+		...state.booksLvl,
 	};
 };
 
