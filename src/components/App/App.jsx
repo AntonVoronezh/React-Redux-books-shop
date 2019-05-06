@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import Books from '../Books/Books';
 import Menu from '../Menu/Menu';
+import Filter from '../Filter/Filter';
 import { Container } from 'semantic-ui-react';
 import 'semantic-ui-css/semantic.min.css';
 
@@ -14,6 +15,7 @@ export default class App extends Component {
 		return (
 			<Container>
 				<Menu />
+				<Filter />
 				<Books {...this.props} />
 			</Container>
 		);
