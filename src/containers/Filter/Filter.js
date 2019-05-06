@@ -1,16 +1,16 @@
 import { connect } from 'react-redux';
-import { setBooksAC } from '../../store/reducers/booksReducer';
-import Filter from '../../components/Filter/Filter'
+import { changeActiveItemFilterAC } from '../../store/reducers/uiReduser';
+import Filter from '../../components/Filter/Filter';
 
 const mapStateToProps = state => {
 	return {
-		...state.booksLvl,
+		...state.ui,
 	};
 };
 
 const mapDispatchToProps = dispatch => {
 	return {
-		setBooksCB: books => dispatch(setBooksAC(books)),
+		changeActiveItemFilterCB: item => dispatch(changeActiveItemFilterAC(item)),
 	};
 };
 
