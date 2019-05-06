@@ -1,9 +1,7 @@
 const CHANGE_ACTIVE_ITEM_FILTER = 'CHANGE_ACTIVE_ITEM_FILTER';
 // ui
 const initialState = {
-	books: null,
-	isLoading: true,
-	aaaaa: 'что0то еще',
+	activeItem: null,
 };
 
 export default (state = initialState, action) => {
@@ -11,11 +9,10 @@ export default (state = initialState, action) => {
 		case CHANGE_ACTIVE_ITEM_FILTER:
 			return {
 				...state,
-				isLoading: false,
-				books: action.payload,
+				activeItem: action.payload,
 			};
 		default:
 			return state;
 	}};
 
-export const changeActiveItemFilterAC = books => ({ type: CHANGE_ACTIVE_ITEM_FILTER, payload: books });
+export const changeActiveItemFilterAC = item => ({ type: CHANGE_ACTIVE_ITEM_FILTER, payload: item });
