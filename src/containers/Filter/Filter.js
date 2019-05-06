@@ -3,6 +3,7 @@ import { changeActiveItemFilterAC } from '../../store/reducers/uiReduser';
 import Filter from '../../components/Filter/Filter';
 
 const mapStateToProps = state => {
+    debugger
 	return {
 		...state.ui,
 	};

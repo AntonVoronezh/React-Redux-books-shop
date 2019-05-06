@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import Books from '../Books/Books';
 import Menu from '../Menu/Menu';
-import Filter from '../Filter/Filter';
+import Filter from '../../containers/Filter/Filter';
 import { Container } from 'semantic-ui-react';
 import 'semantic-ui-css/semantic.min.css';
 

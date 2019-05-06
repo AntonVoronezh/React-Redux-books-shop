@@ -1,7 +1,8 @@
 import React from 'react';
 import { Menu } from 'semantic-ui-react';
 
-export default () => {
+export default props => {
+    debugger
 	return (
 		<Menu secondary>
 			<Menu.Menu>
