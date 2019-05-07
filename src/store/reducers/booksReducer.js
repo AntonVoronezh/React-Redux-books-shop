@@ -4,7 +4,7 @@ const ADD_SEARCH_TEXT = 'ADD_SEARCH_TEXT';
 const initialState = {
 	books: null,
 	isLoading: true,
-	aaaaa: 'что0то еще',
+	searchText: '',
 };
 
 export default (state = initialState, action) => {
@@ -14,6 +14,11 @@ export default (state = initialState, action) => {
 				...state,
 				isLoading: false,
 				books: action.payload,
+			};
+		case ADD_SEARCH_TEXT:
+			return {
+				...state,
+				searchText: state.searchText + action.payload,
 			};
 		default:
 			return state;
