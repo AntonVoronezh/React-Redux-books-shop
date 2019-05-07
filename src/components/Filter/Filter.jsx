@@ -1,5 +1,5 @@
 import React from 'react';
-import { Menu } from 'semantic-ui-react';
+import { Menu, Input } from 'semantic-ui-react';
 
 export default ({ activeItem, changeActiveItemFilterCB }) => {
 	const handleItemClick = item => {
@@ -32,6 +32,9 @@ export default ({ activeItem, changeActiveItemFilterCB }) => {
 					onClick={handleItemClick.bind(null, 'byAutor')}
 				>
 					По автору
+				</Menu.Item>
+				<Menu.Item>
+		<Input placeholder='Поиск по книгам' icon='search'/>
 				</Menu.Item>
 			</Menu.Menu>
 		</Menu>
