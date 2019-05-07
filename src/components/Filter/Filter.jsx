@@ -34,7 +34,7 @@ export default ({ activeItem, changeActiveItemFilterCB }) => {
 					По автору
 				</Menu.Item>
 				<Menu.Item>
-		<Input placeholder='Поиск по книгам' icon='search'/>
+					<Input placeholder="Поиск по книгам" icon="search" />
 				</Menu.Item>
 			</Menu.Menu>
 		</Menu>
