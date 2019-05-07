@@ -20,3 +20,4 @@ export default (state = initialState, action) => {
 	}};
 
 export const setBooksAC = books => ({ type: SET_BOOKS, payload: books });
+export const addSearchTextAC = text => ({ type: ADD_SEARCH_TEXT, payload: text });
