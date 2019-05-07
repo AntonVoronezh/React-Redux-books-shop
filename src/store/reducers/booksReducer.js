@@ -1,4 +1,5 @@
 const SET_BOOKS = 'SET_BOOKS';
+const ADD_SEARCH_TEXT = 'ADD_SEARCH_TEXT';
 // booksLvl
 const initialState = {
 	books: null,
