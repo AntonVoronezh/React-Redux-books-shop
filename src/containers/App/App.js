@@ -7,7 +7,12 @@ import search from '../../helpers/search';
 const mapStateToProps = state => {
 	return {
 		...state.booksLvl,
-		books: search(filter(state.booksLvl.books, state.ui.activeItem), 'ф'),
+		// books: filter(state.booksLvl.books, state.ui.activeItem)
+
+		books:
+			state.booksLvl.books !== null
+				? search(filter(state.booksLvl.books, state.ui.activeItem), 'а')
+				: filter(state.booksLvl.books, state.ui.activeItem),
 	};
 };
 
