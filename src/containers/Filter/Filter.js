@@ -12,6 +12,7 @@ const mapStateToProps = state => {
 const mapDispatchToProps = dispatch => {
 	return {
 		changeActiveItemFilterCB: item => dispatch(changeActiveItemFilterAC(item)),
+		addSearchTextCB: text => dispatch(addSearchTextAC(text)),
 	};
 };
 
