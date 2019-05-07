@@ -1,5 +1,6 @@
 import { connect } from 'react-redux';
 import { changeActiveItemFilterAC } from '../../store/reducers/uiReduser';
+import {  addSearchTextAC } from '../../store/reducers/booksReducer';
 import Filter from '../../components/Filter/Filter';
 
 const mapStateToProps = state => {

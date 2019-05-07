@@ -1,9 +1,14 @@
 import React from 'react';
 import { Menu, Input } from 'semantic-ui-react';
 
-export default ({ activeItem, changeActiveItemFilterCB }) => {
+export default ({ activeItem, changeActiveItemFilterCB, addSearchTextCB }) => {
+	debugger
 	const handleItemClick = item => {
 		changeActiveItemFilterCB(item);
+	};
+
+	const onSearchHandler = ({ target: { value } }) => {
+		addSearchTextCB(value);
 	};
 
 	return (
@@ -34,7 +39,7 @@ export default ({ activeItem, changeActiveItemFilterCB }) => {
 					По автору
 				</Menu.Item>
 				<Menu.Item>
-					<Input placeholder="Поиск по книгам" icon="search" />
+					<Input placeholder="Поиск по книгам" icon="search" onChange={onSearchHandler} />
 				</Menu.Item>
 			</Menu.Menu>
 		</Menu>
