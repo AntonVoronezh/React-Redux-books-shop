@@ -1,3 +1,3 @@
 export default (array, query) => {
-	return array.filter(b => b.title.toLowerCase().indexOf(query.toLowerCase())) >=0;
+	if (array) return array.filter(b => b.title.toLowerCase().indexOf(query.toLowerCase()) >= 0);
 };

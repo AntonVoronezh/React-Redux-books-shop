@@ -9,10 +9,11 @@ const mapStateToProps = state => {
 		...state.booksLvl,
 		// books: filter(state.booksLvl.books, state.ui.activeItem)
 
-		books:
-			state.booksLvl.books !== null
-				? search(filter(state.booksLvl.books, state.ui.activeItem), 'а')
-				: filter(state.booksLvl.books, state.ui.activeItem),
+		// books:  !state.isLoading ? filter(state.booksLvl.books, state.ui.activeItem): null,
+
+			books: !state.isLoading ? filter(search(state.booksLvl.books, 'ро'), state.ui.activeItem) : null, 
+
+		// (?   [] : if() ?books:filter(search(state.booksLvl.books, 'е'), state.ui.activeItem)),
 	};
 };
 
