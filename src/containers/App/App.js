@@ -4,10 +4,10 @@ import App from '../../components/App/App';
 import filter from '../../helpers/filter';
 import search from '../../helpers/search';
 
-const mapStateToProps = state => {
+const mapStateToProps = ({booksLvl, ui}) => {
 	return {
-		...state.booksLvl,
-		books: filter(search(state.booksLvl.books, 'ро'), state.ui.activeItem),
+		...booksLvl,
+		books: filter(search(booksLvl.books, booksLvl.searchText), ui.activeItem),
 	};
 };
 

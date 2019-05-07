@@ -2,7 +2,6 @@ import React from 'react';
 import { Menu, Input } from 'semantic-ui-react';
 
 export default ({ activeItem, changeActiveItemFilterCB, addSearchTextCB }) => {
-	debugger
 	const handleItemClick = item => {
 		changeActiveItemFilterCB(item);
 	};
