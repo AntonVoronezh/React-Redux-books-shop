@@ -1,4 +1,5 @@
-const CHANGE_ACTIVE_ITEM_FILTER = 'CHANGE_ACTIVE_ITEM_FILTER';
+const ADD_TO_CARD = 'ADD_TO_CARD';
+const DELETE_FROM_CARD = 'DELETE_FROM_CARD';
 // card
 const initialState = {
 	activeItem: null,
@@ -6,7 +7,7 @@ const initialState = {
 
 export default (state = initialState, action) => {
 	switch (action.type) {
-		case CHANGE_ACTIVE_ITEM_FILTER:
+		case ADD_TO_CARD:
 			return {
 				...state,
 				activeItem: action.payload,
@@ -15,4 +16,5 @@ export default (state = initialState, action) => {
 			return state;
 	}};
 
-export const changeActiveItemFilterAC = item => ({ type: CHANGE_ACTIVE_ITEM_FILTER, payload: item });
+export const addToCardAC = book => ({ type: ADD_TO_CARD, payload: book });
+export const deleteFromCardAC = id => ({ type: DELETE_FROM_CARD, payload: id });
