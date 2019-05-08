@@ -2,15 +2,14 @@ const ADD_TO_CARD = 'ADD_TO_CARD';
 const DELETE_FROM_CARD = 'DELETE_FROM_CARD';
 // card
 const initialState = {
-	activeItem: null,
+    list: [],
 };
 
 export default (state = initialState, action) => {
 	switch (action.type) {
 		case ADD_TO_CARD:
 			return {
-				...state,
-				activeItem: action.payload,
+				list: [...state.list, action.payload],
 			};
 		default:
 			return state;
