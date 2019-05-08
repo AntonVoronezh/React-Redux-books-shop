@@ -10,7 +10,6 @@ const mapStateToProps = ({ card }) => {
 
 const mapDispatchToProps = dispatch => {
 	return {
-		addToCardCB: book => dispatch(addToCardAC(book)),
 		deleteFromCardCB: id => dispatch(deleteFromCardAC(id)),
 	};
 };
