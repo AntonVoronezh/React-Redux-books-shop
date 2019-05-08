@@ -1,5 +1,6 @@
 import React from 'react';
 import { Menu } from 'semantic-ui-react';
+import Card from '../../containers/Card/Card';
 
 export default () => {
 	return (
@@ -12,9 +13,7 @@ export default () => {
 			</Menu.Item>
 
 			<Menu.Menu position="right">
-				<Menu.Item name="signup">Итого</Menu.Item>
-
-				<Menu.Item name="help"> Корзина</Menu.Item>
+				<Card />
 			</Menu.Menu>
 		</Menu>
 	);
