@@ -1,10 +1,10 @@
 import React from 'react';
 import { Menu, Popup } from 'semantic-ui-react';
 
-export default ({list, deleteFromCardCB}) => {
+export default ({ list, total, deleteFromCardCB }) => {
 	return (
 		<React.Fragment>
-			<Menu.Item name="signup">Итого</Menu.Item>
+			<Menu.Item name="signup">Итого {total} руб.</Menu.Item>
 			<Menu.Item name="help"> Корзина ({list.length})</Menu.Item>
 		</React.Fragment>
 	);

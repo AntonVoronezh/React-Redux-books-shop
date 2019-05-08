@@ -5,7 +5,7 @@ import Card from '../../components/Card/Card';
 const mapStateToProps = ({ card }) => {
 	return {
 		...card,
-		total: card.list.reduce((el, sum) => el.price + sum, 0),
+		total: card.list.reduce((sum, el) => el.price + sum, 0),
 	};
 };
 
