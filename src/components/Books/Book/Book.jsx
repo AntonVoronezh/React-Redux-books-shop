@@ -1,9 +1,15 @@
 import React from 'react';
 import { Card, Icon, Image, Button } from 'semantic-ui-react';
 
-export default ({ image, title, author, price }) => {
+export default ({ image, title, author, price, addToCardCB, id }) => {
 	const buttonAddHandler = () => {
-		console.log('buttonAddHandler');
+		addToCardCB({
+			image,
+			title,
+			author,
+			price,
+			id,
+		});
 	};
 
 	return (
