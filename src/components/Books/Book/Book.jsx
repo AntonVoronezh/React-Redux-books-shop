@@ -2,6 +2,10 @@ import React from 'react';
 import { Card, Icon, Image, Button } from 'semantic-ui-react';
 
 export default ({ image, title, author, price }) => {
+	const buttonAddHandler = () => {
+		console.log('buttonAddHandler');
+	};
+
 	return (
 		<Card>
 			<Image src={image} />
@@ -15,7 +19,7 @@ export default ({ image, title, author, price }) => {
 				<Icon name="rub" />
 				{price} руб.
 			</Card.Content>
-			<Button animated="vertical">
+			<Button animated="vertical" onClick={buttonAddHandler}>
 				<Button.Content hidden>Добавить в корзину</Button.Content>
 				<Button.Content visible>
 					<Icon name="shop" />
