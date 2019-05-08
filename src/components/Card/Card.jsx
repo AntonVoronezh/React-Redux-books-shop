@@ -1,5 +1,5 @@
 import React from 'react';
-import { Menu } from 'semantic-ui-react';
+import { Menu, Popup } from 'semantic-ui-react';
 
 export default ({list, deleteFromCardCB}) => {
 	return (
@@ -9,3 +9,10 @@ export default ({list, deleteFromCardCB}) => {
 		</React.Fragment>
 	);
 };
+
+// <Popup
+// trigger={<Button icon>Click me or Hover me</Button>}
+// header='Movie Search'
+// content='Multiple events can trigger a popup'
+// on={['hover', 'click']}
+// />
