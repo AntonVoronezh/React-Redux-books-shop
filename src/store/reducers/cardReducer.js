@@ -11,6 +11,10 @@ export default (state = initialState, action) => {
 			return {
 				list: [...state.list, action.payload],
 			};
+		case DELETE_FROM_CARD:
+			return {
+				list: state.list.filter(b => b.id !== action.payload),
+			};
 		default:
 			return state;
 	}};
