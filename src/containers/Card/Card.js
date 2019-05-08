@@ -1,18 +1,17 @@
 import { connect } from 'react-redux';
-import { changeActiveItemFilterAC } from '../../store/reducers/uiReduser';
-import {  addToCardAC, deleteFromCardAC } from '../../store/reducers/cardReducer';
+import { addToCardAC, deleteFromCardAC } from '../../store/reducers/cardReducer';
 import Card from '../../components/Card/Card';
 
-const mapStateToProps = state => {
+const mapStateToProps = ({ card }) => {
 	return {
-		...state.ui,
+		...card,
 	};
 };
 
 const mapDispatchToProps = dispatch => {
 	return {
-		changeActiveItemFilterCB: item => dispatch(changeActiveItemFilterAC(item)),
-		addSearchTextCB: text => dispatch(addSearchTextAC(text)),
+		addToCardCB: book => dispatch(addToCardAC(book)),
+		deleteFromCardCB: id => dispatch(deleteFromCardAC(id)),
 	};
 };
 
